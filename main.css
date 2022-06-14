@@ -32,7 +32,7 @@ body{
 #photo-lycee{
     width: 100%;
     height: auto;
-    background-image: url("images/bureau.jpeg");
+    background-image: url("bureau.jpeg");
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
