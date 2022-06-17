@@ -1,5 +1,25 @@
 html {
-	scroll-behavior: smooth;
+	scroll-behavior:smooth;
+}
+
+a:link{
+    text-decoration: none;
+    color: #a29c9b;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #a29c9b;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #e5a835;
+}
+
+a{
+    text-decoration: none;
+    color: #a29c9b;
 }
 
 
@@ -16,8 +36,23 @@ body{
     width: 50%;
     height: 100%;
     background-color: none;
-    
+
+    animation-name: apparition;
+    transition: 330ms;
+    animation-duration: 2s;
 }
+
+@keyframes apparition {
+    from {
+      transform:translateX(-500px);
+      
+    }
+  
+    to {
+        transform:translateX(0px);
+      
+    }
+  }
 
 #photo{
     width: 50%;
@@ -32,7 +67,7 @@ body{
 #photo-lycee{
     width: 100%;
     height: auto;
-    background-image: url("bureau.jpeg");
+    background-image: url("images/bureau.jpeg");
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -40,28 +75,70 @@ body{
  
 }
 
-.menu{
-    background-color: none;
-    width: auto;
-    height: auto;
+.astro{
+    width: 50%;
+    height: 100%;
+    background-position:right;
+    background-size:cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    background-image: url("images/astronaute.png");
+        
     color:white;
     font-weight: bold;
 
-    
-    padding-right: 2%;
-    padding-left: 2%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    
-    
 
     /*clip-path: polygon(100% 0, 100% 80%, 80% 100%, 0 100%, 0 0);*/
 }
 
-.menu:hover{
-    border-bottom: 2px white solid;
+
+.menu{
+    overflow: hidden;
+    background-color: transparent;
+    position: fixed;
+    height: auto;
+    width: 100%; /* Full width */
+    top: 10px; /* Position the navbar at the top of the page */
+    
+    display: inline-flex;
+
+    transition: 330ms;
+    animation-duration: 2s;
+    animation-name: spawn-menu;
+
 }
 
+@keyframes spawn-menu {
+    from {
+      margin-top: -10%;
+      
+    }
+  
+    to {
+      margin-top: 0%;
+      
+    }
+  }
+
+
+.sous-menu{
+    padding-left:2%;
+    padding-right:2%;
+    padding-top:1%;
+    padding-bottom:1%;
+    
+    font-size: 20px;
+    transition: 330ms;
+    color : white;
+
+    /*clip-path: polygon(100% 0, 100% 50%, 80% 100%, 0 100%, 0 0);*/
+
+}
+
+.sous-menu:hover{ 
+    font-size: 25px;
+    
+}
 /*#accueil{
     background-image: url("images/accueil\ gallifreyan.png");
     background-position: center;
@@ -69,16 +146,9 @@ body{
     background-repeat: no-repeat;
 }*/
 
-a:link{
-    text-decoration: none;
-}
 
-header{
-    margin-top: 2%;
-    margin-bottom:2%;
-    margin-left: 50%;
-    display: inline-flex;
-}
+
+
 
 .contenu{
     height: auto;
@@ -95,16 +165,40 @@ header{
     
 }
 
+.title-barre{
+    display: inline-flex;
+    width: 100%;
+    height: auto;
+}
+
 #title{
-  
+    width: auto;
     height: auto;
     font-weight: bold;
     font-size: 50px; 
-    color: white;
+    color: #e5a835;
+    
 }
 
+#numero{
+    width: auto;
+    height: auto;
+    font-weight: bold;
+    font-size: 50px;
+    color: #e5a835;
+  
+}
 
-.suite1{
+.barre{
+    height: 2.5px;
+    width: 45%;
+    transform: translateY(49px);
+    color:transparent;
+    background-color: #e5a835;
+
+}
+
+.suite{
     margin-top: 2%;
     text-align: center;
     height: auto;
@@ -116,7 +210,7 @@ header{
     border-radius: 30px;
 }
 
-.suite1:hover{
+.suite:hover{
     color: #12100E;
     font-size: 18px; 
     
@@ -251,11 +345,39 @@ table{
     
 }
 
+.petit-espacement{
+    height:110px;
+}
+
 footer{
-    width: 100%;
-    height: 18.5%;
-    background-color: #12100E;
-    color: transparent;
+    width: 50%;
+    height: 15.5%;
+    background: rgb(18,16,14);
+    background: linear-gradient(360deg, rgba(18,16,14,1) 50%, rgba(255,255,255,0) 100%); 
+    color: white;
     position: fixed;
     bottom: 0%;
+    text-align: right;
 }
+
+.back{
+    margin-left: 97% ;
+    margin-top: 2%;
+    text-align: center;
+    height: auto;
+    width: 20%;
+    background-color: white;
+    color: #a29c9b;
+    font-size: 18px; 
+    padding: 1%;
+    border-radius: 30px;
+    transition: 330ms;
+}
+
+.back:hover{
+    color: #12100E;
+    font-size: 18px; 
+    width: 22%;
+    
+}
+
